@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garden Grid Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f9f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #garden {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);   /* 5 equal columns */
+      grid-template-rows: repeat(5, 80px);     /* 5 equal rows */
+      gap: 8px;                                /* space between items */
+      width: 500px;
+      background: #dcedc8;                     /* garden soil */
+      padding: 10px;
+    }
+
+    .plot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .carrot { background: #ff7043; }   /* orange carrots */
+    .weed   { background: #388e3c; }   /* green weeds */
+    .water  { background: #42a5f5; }   /* blue pond */
+    .path   { background: #8d6e63; }   /* brown path */
+  </style>
+</head>
+<body>
+  <div id="garden">
+    <div class="plot carrot">🥕</div>
+    <div class="plot weed">🌿</div>
+    <div class="plot carrot">🥕</div>
+    <div class="plot carrot">🥕</div>
+    <div class="plot weed">🌿</div>
+
+    <div class="plot water" style="grid-column: 2 / 4; grid-row: 2 / 4;">💧 Pond</div>
+    <div class="plot carrot">🥕</div>
+    <div class="plot weed">🌿</div>
+
+    <div class="plot path" style="grid-column: 1 / 6; grid-row: 5;">🚶 Path</div>
+  </div>
+</body>
+</html>
